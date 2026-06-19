@@ -1006,8 +1006,14 @@ void setup() {
 
   WiFi.mode(WIFI_STA);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+
+  const uint32_t wifiStartMs = millis();
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
+    if (millis() - wifiStartMs > 20000) {
+      Serial.println("WiFi connect timeout; restarting");
+      ESP.restart();
+    }
   }
 
   seedSampleData();
