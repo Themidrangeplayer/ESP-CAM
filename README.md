@@ -17,7 +17,7 @@ This repository now includes an ESP32-hosted core camera platform scaffold focus
 
 ## File
 
-- `/home/runner/work/ESP-CAM/ESP-CAM/esp32cam_core_platform.ino`
+- `esp32cam_core_platform.ino`
 
 ## What this milestone provides
 
